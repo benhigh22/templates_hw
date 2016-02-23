@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <style>
+        body{
+            background-color: red;
+        }
         #playername{
             font-family: Georgia;
             text-transform: uppercase;
         }
         #player_pos{text-transform: uppercase}
-
+    th{
+        background-color: red;
+    }
     </style>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -15,12 +20,24 @@
 <body>
 <h1>Georgia Bulldogs Receiving Stats 2015</h1>
 {%  for player in players %}
-    <div id = "playername"><strong>{{ player }}</strong></div>
-    <div>RECEPTIONS: {{ player.receptions }}</div>
-    <div>RECEIVING YARDS: {{ player.receiving_yards }}</div>
-    <div>TOUCHDOWNS: {{ player.touchdowns }}</div>
-    <div id = "player_pos">POSITION: {{ player.position }}</div>
+    <table border="4"cellpadding="4" cellspacing="4" bordercolor="black">
+    <tr>
+    <th><div id = "playername"><strong>{{ player }}</strong></div></th>
+    </tr>
+        <tr>
+    <td><div>RECEPTIONS: {{ player.receptions }}</div></td>
+        </tr>
+        <tr>
+    <td><div>RECEIVING YARDS: {{ player.receiving_yards }}</div></td>
+            </tr>
+        <tr>
+    <td><div>TOUCHDOWNS: {{ player.touchdowns }}</div></td>
+            </tr>
+        <tr>
+    <td><div id = "player_pos">POSITION: {{ player.position }}</div></td>
+            </tr>
     <br>
+    </table>
 {% endfor %}
 </body>
 </html>
