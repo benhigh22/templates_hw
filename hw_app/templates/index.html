@@ -10,15 +10,19 @@
             text-transform: uppercase;
         }
         #player_pos{text-transform: uppercase}
-    th{
-        background-color: red;
-    }
+        th{
+            background-color: red;
+        }
+        table{
+            float: left;
+            display:inline-block;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h1>Georgia Bulldogs Receiving Stats 2015</h1>
+<center><h1>Georgia Bulldogs Receiving Stats 2015</h1></center>
 {%  for player in players %}
     <table border="4"cellpadding="4" cellspacing="4" bordercolor="black">
     <tr>
@@ -36,7 +40,6 @@
         <tr>
     <td><div id = "player_pos">POSITION: {{ player.position }}</div></td>
             </tr>
-    <br>
     </table>
 {% endfor %}
 </body>
