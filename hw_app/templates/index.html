@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #playername{
+            font-family: Georgia;
+            text-transform: uppercase;
+        }
+        #player_pos{text-transform: uppercase}
+
+    </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<h1>Georgia Bulldogs Receiving Stats 2015</h1>
 {%  for player in players %}
-    <div>PLAYER NAME: {{ player }}</div>
+    <div id = "playername"><strong>{{ player }}</strong></div>
     <div>RECEPTIONS: {{ player.receptions }}</div>
     <div>RECEIVING YARDS: {{ player.receiving_yards }}</div>
     <div>TOUCHDOWNS: {{ player.touchdowns }}</div>
-    <div>POSITION: {{ player.position }}</div>
+    <div id = "player_pos">POSITION: {{ player.position }}</div>
     <br>
 {% endfor %}
 </body>
